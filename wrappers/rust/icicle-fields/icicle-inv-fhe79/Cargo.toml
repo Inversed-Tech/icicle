@@ -1,15 +1,16 @@
 [package]
-name = "icicle-babybear"
+name = "icicle-inv-fhe79"
 version.workspace = true
 edition.workspace = true
 authors.workspace = true
-description = "Rust wrapper for the CUDA implementation of baby bear prime field by Ingonyama"
+description = "Rust wrapper for the CUDA implementation of FHE-79 prime field by Inversed Tech"
 homepage.workspace = true
 repository.workspace = true
 
 [dependencies]
 icicle-core = { workspace = true }
 icicle-cuda-runtime = { workspace = true }
+ark-ff = "0.4.2"
 
 [build-dependencies]
 cmake = "0.1.50"
@@ -31,7 +32,3 @@ serial_test = "3.0.0"
 default = []
 arkworks = ["icicle-core/arkworks"]
 devmode = ["icicle-core/devmode"]
-
-[[bench]]
-name = "poseidon2"
-harness = false

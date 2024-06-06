@@ -33,6 +33,11 @@ namespace field_config = babybear;
 #elif FIELD_ID == STARK_252
 #include "fields/stark_fields/stark252.cuh"
 namespace field_config = stark252;
+
+#elif FIELD_ID == INV_FHE79
+#include "fields/fhe_fields/inv_fhe79.cuh"
+namespace field_config = inv_fhe79;
+
 #endif
 
 #endif
